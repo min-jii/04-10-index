@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>🍰 MJ Sweet Home 🍰</title>
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+	<style type="text/css">
+		nav{
+		margin-left: 80px;
+		margin-top: 80px;
+		position: fixed;
+		}
+		nav ul, li{
+		margin: 0;
+		padding: 0;
+		}
+		nav ul{
+		width: 800px;
+		height: 260px;
+		}
+		nav ul li{
+		list-style-type: none;
+		width: 20%;
+		text-align: center; 
+		line-height: 40px;
+		}
+		nav ul li a{
+		display: block;
+		color: black;
+		text-decoration: none;
+		font-weight: 400;
+		font-size: 0.9rem;
+		word-spacing: -0.5px;
+		letter-spacing: -0.5px;
+		}
+		nav ul li a:hover{
+		color: gray;
+		transition: all 0.3s;
+		}
+		body, h2, h3, p{
+		margin: 0;
+		font-family: 'Noto Sans KR', sans-serif;
+		font-weight: 300;
+		}
+		h1{
+		margin: 0;
+		font-family: 'Dancing Script', cursive;
+		font-weight: 700;
+		}
+		img{
+		display: block;
+		width: 100%;
+		margin-bottom: 20px;
+		}
+		iframe{
+		width: 790px;
+		height: 444px;
+		margin-bottom: 20px;
+		}
+		header{
+		height: 750px;
+		margin: auto;
+		word-break: keep-all;
+		}
+		h1{
+		text-align: center;
+		padding-top: 250px;
+		text-align: center;
+		font-weight: 700;
+		font-size: 5rem;
+		}
+		h2{
+		margin-top: 100px;
+		margin-bottom: 100px;
+		font-size: 3.2rem;
+		font-weight: 900;
+		line-height: 1.7;
+		word-spacing: -1px;
+		letter-spacing: -1px;
+		text-align: center;
+		}
+		h3{
+		margin-top: 30px;
+		margin-bottom: 30px;
+		font-size: 2.1rem;
+		font-weight: 900;
+		line-height: 1.7;
+		word-spacing: -1px;
+		letter-spacing: -1px;
+		}
+		p{
+		margin-bottom: 15px;
+		font-size: 1.08rem;
+		line-height: 1.7;
+		font-weight: 300;
+		word-spacing: -0.8px;
+		letter-spacing: -0.8px;
+		}
+		footer{
+		height: 900px;
+		}
+		footer p{
+		text-align: center;
+		}
+		strong{}
+		div a{
+		display: inline-block;
+		background: none;
+		width: 192px;
+		height: 50px;
+		text-align: center;
+		line-height: 50px;
+		text-decoration: none;
+		font-size: 1rem;
+		font-weight: 700;
+		border-radius: 5px;
+		box-shadow: 0px 0px 3px gray;
+		color: black;
+		}
+		div a:hover{
+		background: #c7b8e0;
+		box-shadow: none;
+		color: white;
+		transition: all 0.5s;
+		}
+		div ul,li{
+		margin: 0;
+		padding: 0;
+		margin-bottom: 15px;
+		font-size: 1.08rem;
+		line-height: 1.7;
+		font-weight: 300;
+		word-spacing: -0.8px;
+		letter-spacing: -0.8px;
+		}
+		div ul{
+		margin-bottom: 30px;
+		}
+		div ul li{
+		margin-left: 20px;
+		list-style-type: decimal-leading-zero;
+		list-style-position: outside;
+		padding-left: 20px;
+		}
+		.bg-header-1{
+		background: url('img/img12.jpg');
+		background-size: 100% auto;
+		background-position: 0px -100px;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		}
+		.bg-header-2{
+		background: url('img/img18.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-position: 0px -100px;
+		} 
+		.bg-header-3{
+		background: url('img/img12.jpg');
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		opacity: 80%;
+		}
+		.row{width: 800px;
+		height: auto;
+		margin: auto;
+		word-break: keep-all;
+		margin-bottom: 90px;
+		display: flex;
+		padding: 0px 5px;
+		}
+		.text-align-center{text-align: center; font-size: 1.6rem; font-weight: 500; margin-top: 15px;}
+		.col-1{width: 90px; margin: 0px 5px;}
+		.col-2{width: 190px; margin: 0px 5px;}
+		.col-3{width: 290px; margin: 0px 5px;}
+		.col-4{width: 390px; margin: 0px 5px;}
+		.col-5{width: 490px; margin: 0px 5px;}
+		.col-6{width: 590px; margin: 0px 5px;}
+		.col-7{width: 690px; margin: 0px 5px;}
+		.col-8{width: 790px; margin: 0px 5px;}
+		.text-red{color: red; font-weight: 500;}
+		.text-white{color: white;}
+		.textbox{font-size: 1.08rem; font-weight: 500;}
+		.text-ref{font-size: 1rem; font-weight: 400;}
+		#myBtn{
+		  display: block;
+		  width: 50px;
+		  height: 40px;
+		  position: fixed;
+		  bottom: 50px;
+		  right: 50px;
+		  z-index: 99;
+		  font-size: 20px;
+		  border: none;
+		  outline: none;
+		  color: black;
+		  cursor: pointer;
+		  box-shadow: 0px 0px 3px gray;
+		  border-radius: 4px;
+		}
+		#myBtn:hover{
+		  background-color: #b9a8dd;
+		  box-shadow: none;
+		  color: white;
+		  transition: all 0.5s
+		}
+	</style>
+</head>
+<body>
+	<header class="bg-header-1">
+		<nav style="z-index: 1">
+			<ul>
+				<li>
+					<a href="index.html" style="font-weight: 700; font-size: 1rem;">🍰 MJ Sweet HOME</a>
+				</li>
+				<li>
+					<a href="#b">Home Baking</a>
+				</li>
+				<li>
+					<a href="#d">Pound Cake</a>
+				</li>
+				<li>
+					<a href="#g">Ingredients / Recipe</a>
+				</li>
+				<li>
+					<a href="#j">Baking Video</a>
+				</li>
+			</ul>
+		</nav>	
+		<div class="row">
+			<div class="col-8">
+			<h1 class="text-white">🍰 MJ Sweet Home 🍰</h1>
+			<p class="text-white text-align-center" style="font-size: 1.8rem;"> 세상에서 제일 편한, 우리집 홈카페</p>
+			</div>
+		</div>
+	</header>
+	<section id="a">
+		<div class="row">
+			<div class="col-5">
+				<h2 style="text-align: left; margin-top: 40px; margin-bottom: 40px;">귀찮지만,<br>디저트는 먹고 싶은걸</h2>
+				<p style="font-size: 1.2rem; font-weight: 400; word-spacing: -1px; letter-spacing: -1px;">달콤한 디저트 좋아하세요?<br>저는 디저트 좋아해요. 그런데 전.. 사실... <strong>‘집순이’</strong>랍니다.
+					그러다 보니 디저트를 먹고는 싶은데, 또 막상 돌아다니기는 귀찮더라고요. 그래서 직접 만들어 즐기기 위해 홈베이킹을 시작하게 됐어요.
+				</p>
+			</div>
+		</div>
+	</section>
+	<section id="b">
+		<h2 style="margin-bottom: 80px;">홈베이킹족!<br>👍🏻 요기요기 모이세요 👍🏻</h2>
+		<div class="row">
+			<div class="col-4" style="margin-right: 10px;">
+				<img src="img2/img8.jpg" style="padding-top: 45px;">
+			</div>
+			<div class="col-4">
+				<h3>홈베이킹족의 특권!<br>우리집 홈카페</h3>
+				<p>저처럼 홈베이킹을 즐겨, 직접 디저트를 만들어 먹는 걸 좋아하는 사람을 <strong>‘홈베이킹족’</strong>이라고 한데요. 전 완전 홈베이킹족인 것 같아요.
+				집에서 베이킹을 하면 맛있고 예쁜 디저트를 우리집 홈카페에서 즐길 수 있어요. 이게 바로 홈베이킹족의 특권이죠 😆
+				</p>
+			</div>
+		</div>
+	</section>
+	<section id="c">
+		<div class="row" style="margin-top: -60px;">
+			<div class="col-4" style="margin-right: 10px;">
+				<h3>홈베이킹을 망설이는 당신에게</h3>
+				<p>홈베이킹, 너무 어렵게 생각하지 마요!!<br>복잡하고 어려워 보여도,
+				기본적인 것만 잘 지키면 쉽게 만들어 볼 수 있어요~ 아직 베이킹이 낯선 분들을 위해 오늘은 정말 간단하게 만들 수 있는 <strong>‘파운드케이크’</strong> 레시피를 설명해보려해요.
+				같이 한번 만들어봐요~
+				</p>
+			</div>
+			<div class="col-4" style="float: right;">
+				<img src="img2/img6.jpg" style="padding-top: 45px;">
+			</div>
+		</div>
+	</section>
+	<section class="bg-header-2" style="height: 1100px;" id="d">
+		<div class="row">
+			<div style="width: 400px;">
+				<h2 style="text-align: left; margin-bottom: 70px;">파운드케이크,<br>넌 정체가 뭐니?</h2>
+				<h3>꾸준히 사랑받는 아이</h3>
+				<p>파운드케이크 좋아하세요?<br>화려하고 특별하지는 않지만, 오래오래 사랑받는 빵 중 하나랍니다. 주재료인 버터, 설탕, 계란, 밀가루를 각각 동량으로 1파운드씩 배합해서 만들기 시작했기에
+				<strong>‘파운드케이크’</strong>라는 이름이 붙여졌어요.</p>
+				<p> 파운드케이크는 주재료들을 그냥 차례대로 섞어주기만 하면되서 제작법이 단순하지만, 반드시 주의할 점이 있답니다. 어떤 부분을 주의해야 하는지 살펴봅시다.</p>
+			</div>
+		</div>
+	</section>
+	<section id="e">
+		<div class="row">
+			<div class="col-5" style="padding-top: 45px;">	
+				<p>파운드케이크를 만들 때에는 버터를 부드러운 상태로 풀어, 설탕을 넣고 공기를 포집하는 <strong>‘크림법’</strong>을 가장 보편적으로 사용합니다. 이렇게 크림법으로 파운드를 만들기 위해서는 주의할 점이 있는데요, 바로</p>
+				<p class="text-red">1) 실내 온도 <br>2) 버터의 온도<br>3) 계란 및 기타 재료들의 온도</p>
+				<p>온도가 중요한 이유는 반죽의 상태 때문입니다. 온도가 18-20도로 일정해야만 반죽이 분리되지 않고, 더 촘촘한 파운드를 만들 수 있어요.</p>
+			</div>
+			<div class="col-3" style="float: right; text-align: right; padding-top: 5px;">
+				<h3>보다 더 완벽한<br>파운드를 위해서</h3>
+			</div>
+		</div>
+	</section>
+	<section id="f">
+		<div class="row">
+			<div class="col-4" style="margin-top: -40px;">
+				<h3>재료 준비하기</h3>
+				<p class="textbox"><틀 사이즈></p>
+				<p>오란다 틀(대) 1개 분량 15.5 * 7.5 * 6.5cm</p>
+				<p class="textbox"><사전 작업></p>
+				<p>1. 각 재료는 18-20도 사이로 맞춰주세요<br>
+				2. 틀에 버터를 발라 코팅해주고 냉장 보관해주세요</p>
+				<p class="textbox"><준비 재료></p>
+				<p>무염 버터 100g, 설탕 100g, 계란 100g, 박력분 100g<br>베이킹파우더 3g, 생크림 30g, 바닐라빈 1개, 소금 1g</p>
+			</div>
+			<div class="col-4" style="float: right;">
+				<img src="img2/img11.jpg" style="padding-top: 15px;">
+			</div>
+		</div>
+	</section>
+	<section id="g">
+		<h2>파운드케이크,<br>🧑🏻‍🍳 한번 만들어봅시다 👩🏻‍🍳</h2>
+		<div class="row">
+			<div class="col-8">
+				<h3>골라 만드는 재미</h3>
+			</div>
+		</div>	
+	</section>
+	<section style="margin-top: -90px;" id="h">
+		<div>
+			<div class="row">
+				<div class="col-2">
+					<a href="a.html" target="_new">Matcha</a>
+				</div>
+				<div class="col-2">
+					<a href="b.html" target="_new">Earl Grey</a>
+				</div>
+				<div class="col-2">
+					<a href="c.html" target="_new">Lemon</a>
+				</div>
+				<div class="col-2">
+					<a href="d.html" target="_new">Choco</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="i">
+		<div class="row">
+			<div class="col-4" style="margin-top: -30px; margin-right: 10px;">
+				<img src="img2/img3.jpg">
+			</div>
+			<div class="col-4" style="margin-top: -30px; padding-top: 70px;">
+				<p class="textbox">< 다른 맛도 먹어보고 싶다! ></p>
+				<p>파운드케이크는 기본 배합만 잘 지킨다면 추가 재료를 넣어 말차, 얼그레이, 레몬 등 다양한 맛으로 즐길 수 있답니다.</p>
+				<p>또한 파운드 틀 외에도 큐브 틀, 레몬 틀, 예쁜 틀에 담아 원하는 모양으로 즐길 수도 있어요. 레시피는 맛에 따라 달라지니, 원하는 맛을 선택해서 레시피를 확인해주세요!</p>
+			</div>
+		</div>	
+	</section>
+	<section style="margin-top: -40px;" id="j">
+		<div class="row">
+			<div class="col-5" style="padding-top: 35px; margin-left: 10px;">	
+				<ul>
+					<li>
+						실온 버터를 풀어주고 소금과 설탕을 3-4번 나눠 넣어주세요.
+					</li>
+					<li>
+						실온상태의 계란을 최소 10번에 나눠 소량씩 넣어 휘핑해줍니다.
+					</li>
+					<li>
+						박력분과 베이킹파우더를 채 쳐 넣고, 주걱으로 가볍게 섞어주세요.
+					</li>
+					<li>
+						실온상태의 생크림과 바닐라빈을 넣고 섞어, 반죽을 완성해주세요.
+					</li>
+					<li>
+						차가운 틀에 반죽을 담고, 바닥에 탁! 내리쳐 기포를 터뜨려주세요.
+					</li>
+					<li>
+						양옆을 높게 만들어주고, 윗면이 잘 터지도록 버터를 한 줄 짜주세요.
+					</li>
+					<li>
+						160도에서 40분 구워 식힌 후, 랩으로 싸서 하루정도 보관해주세요.
+					</li>
+				</ul>
+			</div>
+			<div class="col-3" style="margin-top: -10px; float: right; text-align: right;">
+				<h3>포슬포슬 촉촉한<br>바닐라빈<br>파운드케이크<br>Recipe 🍰</h3>
+			</div>
+		</div>	
+	</section>
+	<section style="margin-top: -85px;" id="k">
+		<div class="row"> 
+			<div class="col-8">
+					<iframe src="https://www.youtube.com/embed/zzUcS578aQg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>	
+		</div>	
+	</section>
+	<section id="l">
+		<div class="row">
+			<div class="col-4" style="margin-top: -50px;">
+				<h3>다음날,<br>파운드케이크 먹는날</h3>
+			</div>
+			<div class="col-4" style="padding-top: 30px; margin-top: -45px;">
+				<p>파운드케이크는 만든 당일보다,<br>랩으로 싸서 하루 숙성 시켜 먹으면 더 촉촉해져서 훨씬 맛있어요. 하루 동안 잘 숙성된 파운드 위에 슈가파우더를<br>샤샤샥~ 뿌려주면 파운드케이크 먹을 준비 끄읕!! 🤗😋</p>
+			</div>
+		</div>	
+	</section>		
+	<section style="margin-top: -80px;" id="m">
+		<div class="row">
+			<div class="col-8">
+				<iframe src="https://www.youtube.com/embed/IwsMTPQmFcM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>	
+	</section>
+	<section id="n">
+		<div class="row">
+			<div class="col-8" style="text-align: center;">
+				<h2 style="margin-top: 10px; margin-bottom: 50px;">홈베이킹,<br>생각보다 쉬운데?</h2>
+				<p>파운드케이크는 조금 묵직한 편이어서<br>음료를 곁들여 함께 먹으면 좋아요.<br>전 파운드케이크 + 흰 우유 조합을 추천합니다👍🏻</p>
+				<p>홈베이킹, 생각보다 쉽지 않나요?<br>파운드가 적응이 됐다면, 다른 디저트도 만들어보세요.<br>
+				완벽하지 않아도 괜찮아요. 즐거운 마음으로 <strong>‘도전’</strong> 하는거죠</p>
+			</div>
+		</div>
+	</section>
+	<footer class="bg-header-3" style="z-index: 2">
+		<section id="o">
+		<div class="row" style="padding-top: 180px;">
+			<div class="col-8">
+				<p class="text-ref" style="text-align: center;font-weight: 500;"> [참고 출처]
+				<p class="text-ref" style="text-align: center; font-weight: 500;">image<br></p>
+				<p class="text-ref" style="text-align: center;">
+				https://www.thespruceeats.com/fluffy-homemade-vanilla-cake-995187<br>
+				https://www.bakingmad.com/recipe/mini-victoria-sponge-cakes<br>
+				https://www.tasteofhome.com/collection/baking-ingredients/<br>
+				http://thepolkadotter.com/french-earl-grey-bundt-cake/<br>
+				https://hipfoodiemom.com/2013/01/28/mini-chocolate-bundt-cakes-perfection-in-a-bundt-cake/
+				</p>
+				<p class="text-ref" style="text-align: center; font-weight: 500;">music<br></p>
+				<p class="text-ref" style="text-align: center;">
+				Hibernia Sleep-Daniel Kaede<br>
+				Distant Fortune-Daniel Kaede<br>
+				Sunday Smile-Bireli Snow<br>
+				</p>
+			</div>
+		</div>
+	</section>
+	<section style="margin-top: 100;">
+			<p class="text-ref" style="font-weight: 500">ⓒ 2020. 국립한경대학교 디자인학과 김민지 All Rights Reserved.</p>
+	</section>		
+			<button onclick="topFunction()" id="myBtn" title="Go to top">▲</button>	
+	</footer>
+	<script>
+	var mybutton = document.getElementById("myBtn");
+	window.onscroll = function() {scrollFunction()};
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+	    mybutton.style.display = "block";
+	  } else {
+	    mybutton.style.display = "none";
+	  }
+	}
+	function topFunction() {
+	  document.body.scrollTop = 0;
+	  document.documentElement.scrollTop = 0;
+	}
+</script>
+</body>
+</html>
